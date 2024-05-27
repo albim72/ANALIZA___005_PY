@@ -50,3 +50,15 @@ print(cube)
 
 kwadraty = [i**2 for i in range(1, 100_000)]
 print(kwadraty[-4:-1])
+
+#napisz funkcję budującą listę o dwolnej długości gdzie elementami listy są dowolne potęgi każxej wartości z zadanego przedzialu
+# uzyj tej fukcji w dwoch rożny przypadkach
+
+def generuj_liste(potega,min,max):
+    return [i**potega for i in range(min,max)]
+
+p1 = generuj_liste(5,100,112)
+p2 = generuj_liste(4,2,16)
+
+print(p1)
+print(p2)
