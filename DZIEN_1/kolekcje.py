@@ -70,3 +70,64 @@ indeksy_jan = [index for index, value in enumerate(imiona) if value == "Jan"]
 print(f"indeksy dla Anna: {indeksy_anna}")
 print(f"indeksy dla Jan: {indeksy_jan}")
 
+#zbiór
+
+kolory = {"zielony","czerwony","niebieski","czarny","biały","brązowy","czerwony"}
+print(kolory)
+print(kolory)
+print(kolory)
+kolory.add("pomarańczowy")
+print(kolory)
+kolory.update(["fioletowy","cyjan","żółty"])
+print(kolory)
+kol_lista = list(kolory)
+print(kol_lista)
+
+#słownik
+osoba = {
+    "imię":"Jan",
+    "nazwisko":"Kot",
+    "miasto":"Toruń",
+    "wiek":54,
+    "kupony":[4,2,56,266,123],
+    333:764656475
+}
+print(osoba)
+print(osoba["miasto"])
+print(osoba["kupony"])
+print(osoba["kupony"][2])
+print(osoba[333])
+
+print(osoba.keys())
+print(osoba.values())
+print(osoba.items())
+
+osoba["miasto"] = "Gdańsk"
+print(osoba)
+
+osoba["nr_legitymacji"] = "ADF563452"
+print(osoba)
+
+#zbuduj słownik z polami: marka,model,pojemnosc_silnika,rocznik i wstaw dowolne dane
+#wyśwoetl słownik, wyświel tylko opole marka, dodaj nowe pole cena i przypisz wartość, wyświetl słownik po zmianach
+
+
+# Tworzymy słownik z danymi o samochodzie
+samochod = {
+    "marka": "Toyota",
+    "model": "Corolla",
+    "pojemnosc_silnika": 1.8,
+    "rocznik": 2020
+}
+
+# Wyświetlamy cały słownik
+print("Słownik samochodu:", samochod)
+
+# Wyświetlamy tylko pole "marka"
+print("Marka samochodu:", samochod["marka"])
+
+# Dodajemy nowe pole "cena" i przypisujemy wartość
+samochod["cena"] = 75000
+
+# Wyświetlamy słownik po zmianach
+print("Słownik samochodu po dodaniu pola 'cena':", samochod)
