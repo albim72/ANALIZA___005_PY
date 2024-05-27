@@ -24,4 +24,29 @@ rank("Python","Java","C#","JavaScript",nrrank=56)
 rank("Python","C++","Java","C#","JavaScript","TypeScript",nrrank=56)
 
 
+#przykład 3 -> funkcje anonimowe
 
+print((lambda d:d+112)(3))
+s = lambda x,y,z=1:(x-2*z)/(y-x)
+print(s(3,5,2))
+print(s(6,7))
+
+
+def multi(n):
+    return lambda a:a*n
+
+print(multi(30)(3))
+
+num = [56,7,8,-32,45,24,-564,3,76,1109,-234,45,-435]
+
+parzyste = list(filter(lambda x:x%2==0,num))
+print(parzyste)
+
+cube = list(map(lambda x:x**3,num))
+print(cube)
+
+#zbuduj liste która bedzie składała się z wartości całkowitch z przedziały [1,100000]
+#Każda z wartości ma być kwadratem  wartości
+
+kwadraty = [i**2 for i in range(1, 100_000)]
+print(kwadraty[-4:-1])
