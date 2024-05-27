@@ -62,3 +62,16 @@ p2 = generuj_liste(4,2,16)
 
 print(p1)
 print(p2)
+
+#funkcja wyższego rzędu
+def witaj(imie):
+    return f'Miło Cię widzieć {imie}'
+
+def konkurs(imie,miejsce,punkty):
+    return f'uczestnik konkursu: {imie},miejsce: {miejsce}, punkty: {punkty}'
+
+def osoba(funkcja,*args):
+    return funkcja(*args)
+
+print(osoba(witaj,"Leon"))
+print(osoba(konkurs,"Anna",12,67))
