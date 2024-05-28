@@ -34,3 +34,15 @@ ax2[1].set_title('set_xlim(left=-1,right=1)\nautoscale()\n')
 plt.show()
 
 
+print(mpl.__version__)
+#wykres tej samej funkcji w formie wyświetlenia punktów (punkty - gwiazdki)
+fig3,ax3 = plt.subplots()
+
+collection = mpl.collections.StarPolygonCollection(
+    5,7,[150,],
+    offsets = np.column_stack([x,y]),
+    transOffset = ax3.transData
+)
+ax3.add_collection(collection)
+ax3.autoscale_view()
+plt.show()
